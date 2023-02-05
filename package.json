@@ -5,8 +5,7 @@
   "main": "app.js",
   "scripts": {
     "dev": "react-scripts start",
-    "start": "node app.js",
-    "heroku-postbuild": "npm run build"
+    "start": "node app.js"
     },
   "author": "",
   "license": "ISC",
