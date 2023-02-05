@@ -1,19 +1,25 @@
-//jshint esversion:6
+//jshint esversion:8
 
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const _ = require("lodash");
+require('dotenv').config();
 
 
 const app = express();
+
+let PORT = process.env.PORT || 3000;
 
 app.set('view engine', 'ejs');
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 mongoose.set("strictQuery", false);
-mongoose.connect("mongodb+srv://yonihasler:Toxigen86@cluster0.yw3nhgj.mongodb.net/todolistDB", {useNewUrlParser: true});
+// mongoose.connect("mongodb+srv://yonihasler:Toxigen86@cluster0.yw3nhgj.mongodb.net/todolistDB", {useNewUrlParser: true});
+
+mongoose.connect("mongodb+srv://"+process.env.ADMIN_NAME +":"+process.env.ADMIN_PASS+"@cluster0.yw3nhgj.mongodb.net/todolistDB", {useNewUrlParser: true});
+
 
 const itemsSchema = {
   name: String
@@ -139,8 +145,10 @@ app.get("/about", function(req, res){
   res.render("about");
 });
 
-let port = process.env.PORT;
-if (port == null || port == "") {  port = 3000;}
- 
- app.listen(port, function() {  console.log("Server started succesfully");}); 
+if (PORT == null || PORT == "") {
+  PORT = 3000;
+} 
+app.listen(PORT, () => {
+  console.log("server started on port ${PORT}");
+});
 
