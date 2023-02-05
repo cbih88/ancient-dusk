@@ -6,8 +6,6 @@
   "scripts": {
     "dev": "react-scripts start",
     "start": "node app.js",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
     "heroku-postbuild": "npm run build"
     },
   "author": "",
