@@ -4,7 +4,12 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "dev": "react-scripts start",
+    "start": "serve -s build",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "heroku-postbuild": "npm run build"
     },
   "author": "",
   "license": "ISC",
@@ -16,6 +21,7 @@
     "ejs": "^3.1.8",
     "express": "^4.16.3",
     "lodash": "^4.17.21",
-    "mongoose": "^6.9.0"
+    "mongoose": "^6.9.0",
+    "server": "^1.0.38"
   }
 }
