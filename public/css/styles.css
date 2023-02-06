@@ -56,15 +56,24 @@ form.item {
   margin-left: 20px;
 }
 
-button {
+button{
+  background-color: red;
+  width: 60px;
+  height: 30px;
+  margin-left: 20px;
+  color: #fff;
+  border-radius: 30%;
+}
+
+.add {
   min-height: 50px;
   width: 50px;
+  margin-right: 20px;
   border-radius: 50%;
   border-color: transparent;
   background-color: #A683E3;
   color: #fff;
   font-size: 30px;
-  padding-bottom: 6px;
   border-width: 0;
 }
 
