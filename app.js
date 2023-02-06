@@ -9,7 +9,7 @@ require('dotenv').config();
 
 const app = express();
 
-let PORT = process.env.PORT || 3000;
+let PORT = process.env.PORT || 3030;
 
 app.set('view engine', 'ejs');
 
