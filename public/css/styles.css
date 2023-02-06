@@ -26,8 +26,10 @@ h1 {
 .item {
   min-height: 70px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #F1F1F1;
+  margin: 0 20px;
 }
 
 .item:last-child {
@@ -58,11 +60,11 @@ form.item {
 
 button{
   background-color: red;
-  width: 60px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   margin-left: 20px;
   color: #fff;
-  border-radius: 30%;
+  border-radius:100%;
 }
 
 .add {
